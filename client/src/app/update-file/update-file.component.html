@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<div class="container">
+  <div class="update-box">
+    <h1>Update file</h1>
+    <p><b>Please fill the form and submit to update the file from the database</b></p>
+    
+    <div>
+      <input type="text" name="title" placeholder="Title" value="{{title}}" #title_input>
+      <input type="text" name="format" placeholder="Format" value="{{format}}" #format_input>
+      <input type="text" name="genre" placeholder="Genre" value="{{genre}}" #genre_input>
+      <input type="text" name="path" placeholder="Path" value="{{path}}" #path_input>
+      <div class="button-container">
+        <button (click)="onUpdate(title_input.value, format_input.value, genre_input.value, path_input.value)">Update</button>
+        <button (click)="onCancel()">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>

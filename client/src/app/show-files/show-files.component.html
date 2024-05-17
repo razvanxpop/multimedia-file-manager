@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<div class="container">
+  <div class="details">
+    <h1>Files</h1>
+
+    <input type="text" placeholder="Title:" #title (input)="onChange(title.value)"/>
+
+    <button (click)="navigateToAdd()">Add new file</button>
+    <p id="info">The query has been done with the title "{{previousTitle}}"</p>
+  </div>
+  <table>
+    <tr>
+      <th> TITLE</th>
+      <th> FORMAT</th>
+      <th> GENRE</th>
+      <th> PATH</th>
+      <th> ACTION</th>
+    </tr>
+    @for(file of files; track file){
+    <tr>
+      <td>{{file.title}}</td>
+      <td>{{file.format}}</td>
+      <td>{{file.genre}}</td>
+      <td>{{file.path}}</td>
+      <td>
+        <button id="updateButton" (click)="navigateToUpdate(file.id)">Update</button>
+        <br>
+        <button id="deleteButton" (click)="navigateToDelete(file.id)">Delete</button>
+        <br>
+      </td>
+    </tr>
+    }
+  </table>
+</div>

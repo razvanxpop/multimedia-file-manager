@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<div class="container">
+  <div class="form-container">
+    <h1>Add File</h1>
+    
+    <div>
+      <input type="text" name="title" placeholder="Title" #title> <br/>
+      <input type="text" name="format" placeholder="Format Type" #format> <br/>
+      <input type="text" name="genre" placeholder="Genre" #genre> <br/>
+      <input type="text" name="path" placeholder="Path" #path> <br/>
+      <div class="button-container">
+        <button (click)="onAdd(title.value, format.value, genre.value, path.value)">Add File</button>
+        <button (click)="onCancel()">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
