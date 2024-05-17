@@ -52,13 +52,18 @@ This web application allows users to manage a multimedia file collection. It pro
        die("Connection failed: " . $conn->connect_error);
       }
    ?>
+
+5. **Set Backend URL Environment Variable**
+   - Set an environment variable for the backend URL. This URL will be used by the Angular application to communicate with the backend server.
+   ```sh
+   export BACKEND_URL=https://www.example.com/api
   
-5. **Install Angular Dependencies**
+7. **Install Angular Dependencies**
    ```sh
    cd client
    npm install
 
-7. **Run the Angular Development Server**
+8. **Run the Angular Development Server**
    ```sh
    ng serve
 9. **Run the PHP Server**
