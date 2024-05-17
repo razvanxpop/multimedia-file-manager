@@ -27,9 +27,9 @@ This web application allows users to manage a multimedia file collection. It pro
 1. **Clone the Repository**
    ```sh
    git clone https://github.com/yourusername/multimedia-collection-app.git
-   cd multimedia-collection-app
+   cd multimedia-file-manager
 
-2. **Setup database
+2. **Setup database**
    CREATE TABLE multimedia_files (
     id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
@@ -38,24 +38,24 @@ This web application allows users to manage a multimedia file collection. It pro
     file VARCHAR(255) NOT NULL
 );
 
-3. **Configure Database Connection
+3. **Configure Database Connection**
    - Update database.php with your database credentials using a dotenv file.
   
-4. **Install Angular Dependencies
+4. **Install Angular Dependencies**
    cd client
    npm install
 
-5. **Run the Angular Development Server
+5. **Run the Angular Development Server**
    ng server
-6. **Run the PHP Server
+6. **Run the PHP Server**
    php -S localhost:8000
 
 ## Usage
-  - **Browse Multimedia Files: Navigate to the browse page and select a genre/category to view titles.
-  - **Add Multimedia Files: Use the form on the add page to input details of the new file.
-  - **Update Multimedia Files: Click on a file from the list to open a prepopulated modal for editing.
-  - **Delete Multimedia Files: Click on a file and confirm the deletion.
+  - Browse Multimedia Files: Navigate to the browse page and select a genre/category to view titles.
+  - Add Multimedia Files: Use the form on the add page to input details of the new file.
+  - Update Multimedia Files: Click on a file from the list to open a prepopulated modal for editing.
+  - Delete Multimedia Files: Click on a file and confirm the deletion.
 
 ## Security
-  - **SQL Injection Prevention: Prepared statements are used for database interactions to prevent SQL injection attacks.
-  - **Input Validation: Various validation logic is implemented to ensure data integrity.
+  - SQL Injection Prevention: Prepared statements are used for database interactions to prevent SQL injection attacks.
+  - Input Validation: Various validation logic is implemented to ensure data integrity.
