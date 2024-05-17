@@ -1,7 +1,7 @@
 # Multimedia File Collection Management Application
 
 ## Description
-This web application allows users to manage a multimedia file collection. It provides functionalities to browse, add, update, and delete multimedia files. The application uses PHP for server-side operations and Angular for the client-side interface, incorporating AJAX for asynchronous data retrieval. The multimedia files' metadata is stored in a MySQL database hosted on the SCS network at `www.scs.ubbcluj.ro`.
+This web application allows users to manage a multimedia file collection. It provides functionalities to browse, add, update, and delete multimedia files. The application uses PHP for server-side operations and Angular for the client-side interface, incorporating AJAX for asynchronous data retrieval. The multimedia files' metadata is stored in a MySQL database.
 
 ## Features
 - **Browse Multimedia Files**: Retrieve and display multimedia file titles based on category/genre using AJAX.
@@ -19,7 +19,7 @@ This web application allows users to manage a multimedia file collection. It pro
 
 ## Prerequisites
 - PHP 7.0 or higher
-- MySQL database on `www.scs.ubbcluj.ro`
+- MySQL database
 - Angular CLI
 
 ## Installation
@@ -37,10 +37,21 @@ This web application allows users to manage a multimedia file collection. It pro
     format VARCHAR(50) NOT NULL,
     genre VARCHAR(50) NOT NULL,
     file VARCHAR(255) NOT NULL
-);
+   );
 
 4. **Configure Database Connection**
    - Update database.php with your database credentials using a dotenv file.
+   ```php
+   <?php
+      $servername = "your_servername";
+      $username = "your_username";
+      $password = "your_password";
+      $dbname = "your_database";
+      $conn = new mysqli($servername, $username, $password, $dbname);
+      if ($conn->connect_error) {
+       die("Connection failed: " . $conn->connect_error);
+      }
+   ?>
   
 5. **Install Angular Dependencies**
    ```sh
@@ -49,9 +60,10 @@ This web application allows users to manage a multimedia file collection. It pro
 
 7. **Run the Angular Development Server**
    ```sh
-   ng server
+   ng serve
 9. **Run the PHP Server**
    ```sh
+   cd ../server
    php -S localhost:8000
 
 ## Usage
