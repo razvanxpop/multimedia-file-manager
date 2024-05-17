@@ -30,6 +30,7 @@ This web application allows users to manage a multimedia file collection. It pro
    cd multimedia-file-manager
 
 2. **Setup database**
+   ```sql
    CREATE TABLE multimedia_files (
     id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
@@ -38,16 +39,19 @@ This web application allows users to manage a multimedia file collection. It pro
     file VARCHAR(255) NOT NULL
 );
 
-3. **Configure Database Connection**
+4. **Configure Database Connection**
    - Update database.php with your database credentials using a dotenv file.
   
-4. **Install Angular Dependencies**
+5. **Install Angular Dependencies**
+   ```sh
    cd client
    npm install
 
-5. **Run the Angular Development Server**
+7. **Run the Angular Development Server**
+   ```sh
    ng server
-6. **Run the PHP Server**
+9. **Run the PHP Server**
+   ```sh
    php -S localhost:8000
 
 ## Usage
